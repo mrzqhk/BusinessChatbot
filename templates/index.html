@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dolphin Chatbot</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #046809;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 12rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #046809;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #046809;
+            outline: none;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #046809;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #035706;
+            transform: scale(1.05);
+        }
+        
+
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+            word-wrap: break-word;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Business Chatbot (Powered by Dolphin3.0-Mistral-24B via OpenRouter)</h1>
+        <form method="POST">
+            <input type="text" name="message" placeholder="Ask me anything..." value="{{ user_input }}">
+            <input type="submit" value="Send">
+        </form>
+        <p><strong>Bot:</strong> {{ reply }}</p>
+    </div>
+    <footer>Copyright Marzooq</footer>
+</body>
+</html>
