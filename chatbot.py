@@ -4,7 +4,7 @@ import time
 
 app = Flask(__name__)
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {OPENROUTER_API_KEY}",
